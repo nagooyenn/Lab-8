@@ -1,29 +1,38 @@
+// Create student object with properties and methods
 const student = {
-  name: 'Annie Nguyen',
-  age: 21,
-  enrolled: true,
-  courses: ['JavaScript', 'HTML', 'CSS'],
-  displayInfo() {
-    return `${this.name} is ${this.age} years old and is ${this.enrolled ? 'enrolled' : 'not enrolled'}.`;
-  },
-  addCourse(newCourse) {
-    this.courses.push(newCourse);
-    console.log(`Added course: ${newCourse}`);
-  },
-  totalCourses() {
-    return this.courses.length;
-  }
-};
+    name: 'Annie Nguyen',
+    age: 21,
+    enrolled: true,
+    courses: ['JavaScript', 'HTML', 'CSS'],
+    displayInfo() {
+      return `${this.name} is ${this.age} years old and is ${this.enrolled ? 'enrolled' : 'not enrolled'}.`;
+    },
+    addCourse(newCourse) {
+      this.courses.push(newCourse);
+      console.log(`Added course: ${newCourse}`);
+    },
+    totalCourses() {
+      return this.courses.length;
+    }
+  };
+  
+  // Log basic student info
+  console.log(student.name);
+  console.log(student.age);
+  console.log(student.displayInfo());
+  
 
 console.log(student.name);
 console.log(student.age);
 console.log(student.displayInfo());
 
+// Convert object to JSON and back
 const studentJSON = JSON.stringify(student);
 console.log("JSON String:", studentJSON);
 
 const parsedStudent = JSON.parse(studentJSON);
 console.log("Parsed Student Object:", parsedStudent);
+
 
 const { name, courses } = student;
 console.log("Destructured Name:", name);
