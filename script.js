@@ -17,3 +17,11 @@ console.log("JSON String:", studentJSON);
 
 const parsedStudent = JSON.parse(studentJSON);
 console.log("Parsed Student Object:", parsedStudent);
+
+const { name, courses } = student;
+console.log("Destructured Name:", name);
+console.log("Destructured Courses:", courses);
+
+const scores = [85, 92, 78, 90];
+const [score1, score2] = scores;
+console.log("First two scores:", score1, score2);
