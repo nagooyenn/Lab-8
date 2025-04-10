@@ -25,3 +25,10 @@ console.log("Destructured Courses:", courses);
 const scores = [85, 92, 78, 90];
 const [score1, score2] = scores;
 console.log("First two scores:", score1, score2);
+
+const clonedStudent = { ...student, graduationYear: 2025 };
+console.log("Cloned Student with graduationYear:", clonedStudent);
+
+const newCourses = ["Philosophy", "Art"];
+const allCourses = [...student.courses, ...newCourses];
+console.log("All Combined Courses:", allCourses);
