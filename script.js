@@ -5,6 +5,13 @@ const student = {
   courses: ['JavaScript', 'HTML', 'CSS'],
   displayInfo() {
     return `${this.name} is ${this.age} years old and is ${this.enrolled ? 'enrolled' : 'not enrolled'}.`;
+  },
+  addCourse(newCourse) {
+    this.courses.push(newCourse);
+    console.log(`Added course: ${newCourse}`);
+  },
+  totalCourses() {
+    return this.courses.length;
   }
 };
 
@@ -32,3 +39,6 @@ console.log("Cloned Student with graduationYear:", clonedStudent);
 const newCourses = ["Philosophy", "Art"];
 const allCourses = [...student.courses, ...newCourses];
 console.log("All Combined Courses:", allCourses);
+
+student.addCourse("History");
+console.log("Total courses:", student.totalCourses());
