@@ -42,3 +42,7 @@ console.log("All Combined Courses:", allCourses);
 
 student.addCourse("History");
 console.log("Total courses:", student.totalCourses());
+
+const total = scores.reduce((sum, val) => sum + val, 0);
+const average = total / scores.length;
+console.log("Average Score:", average);
